@@ -1,0 +1,232 @@
+.mainBackground {
+  background: url('../../../Image/main/dava-m-banner.png');
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+}
+
+.mainText {
+  position: relative;
+  top: 98px;
+  left: 78px;
+  max-width: 800px;
+  width: 100%;
+  color: #111;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.mainText h1 {
+  font-weight: 800;
+  font-size: 55px;
+  margin-bottom: 1.5rem;
+}
+
+.mainText p {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 2rem;
+}
+
+.mainButtons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  padding-right: 15px;
+}
+
+.mainButtons a {
+  background: #4829ff;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 18px 60px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  min-width: 180px;
+}
+
+.mainButtons a:hover {
+  background-color: #3630d4;
+}
+
+.mainSection01 {
+  font-family: 'GmarketSansMedium';
+  font-size: 62px;
+  text-align: center;
+  font-weight: 900;
+  padding-top: 61px;
+}
+
+.mainSection01 span {
+  color: #3630d4;
+}
+
+.davaMBox {
+  width: 100%;
+  padding-left: 182px;
+  margin-top: 100px;
+}
+
+.davaMNum {
+  max-width: 100%;
+}
+
+.davaMInfo h2 {
+  font-size: 40px;
+  font-weight: 800;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.dmip {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 650;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+  word-break: keep-all;
+}
+
+.dmip span {
+  color: #00328c;
+  z-index: 1;
+  font-size: 27px;
+}
+
+.davaMBtnBox {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.leftButton,
+.rightButton {
+  width: 215px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.davaMInfo button:hover {
+  background-color: #00328c;
+  color: white;
+}
+
+.leftButton {
+  margin-right: 10px;
+  align-items: center;
+  background-color: #3630d4;
+  color: white;
+}
+
+.rightButton {
+  margin-left: 10px;
+  align-items: center;
+  background-color: #ddd;
+  color: #111;
+}
+
+/* 팝업 스타일 */
+.customOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.customModal {
+  background: #fff;
+  padding: 36px;
+  width: 500px;
+  max-width: 90%;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.4s ease;
+  outline: none;
+}
+
+.cpTopBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cpClose button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cpTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+}
+
+.cpInfoBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cpInfoBox li {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.cpInfoBox span {
+  font-weight: bold;
+  color: #4829ff;
+  margin-right: 10px;
+}
+
+.cpBulletList li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.cpBulletList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #3d5afe;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

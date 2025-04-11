@@ -1,0 +1,290 @@
+/* 공통 섹션 타이틀 */
+.mainContainer{
+  padding-left: 70px;
+}
+.sectionHeader {
+  font-family: 'GmarketSansMedium';
+  font-size: 62px;
+  text-align: center;
+  font-weight: 900;
+  padding-top: 61px;
+}
+.sectionHeader span {
+  color: #3630d4;
+}
+
+/* 공통 섹션 컨테이너 */
+
+.sectionContainer {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  display: block;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+}
+
+/* 숫자 아이콘 */
+.sectionNumber {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* 텍스트 영역 */
+.sectionContent {
+  flex: 1 1 30%;
+}
+
+.sectionTitle {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.sectionContent h2 {
+  font-size: 40px;
+  font-weight: 800;
+  /* padding-top: 50px; */
+  padding-bottom: 25px;
+}
+
+.sectionText {
+  font-size: 23px;
+  line-height: 37px;
+  font-weight: 650;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+  word-break: keep-all;
+}
+
+.sectionSmallText {
+  font-size: 23px;
+  line-height: 37px;
+  font-weight: 520;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+  word-break: keep-all;
+}
+
+.sectionText span {
+  color: #00328c;
+  font-size: 27px;
+}
+
+/* 이미지 wrapper */
+.sectionImage img {
+  max-width: 100%;
+  width: 700px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* 버튼 영역 */
+.buttonGroup {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.primaryButton,
+.secondaryButton {
+  width: 215px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: #3630d4;
+  color: white;
+}
+.secondaryButton {
+  background-color: #ddd;
+  color: #111;
+}
+
+.primaryButton:hover {
+  background-color: #00328c;
+}
+.secondaryButton:hover {
+  background-color: #bbb;
+  color: white;
+}
+
+/* 두번쨰 섹션 */
+
+.section02_Container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+}
+
+
+.section2_Number {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.section2_Title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-weight: 800;
+  padding-top: 20px; /* ✅ px 단위 추가 */
+}
+
+/* 세번쨰 섹션 */
+.section03_Container {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+}
+
+
+.processFlowImage {
+  margin-top: 20px;
+}
+
+.processFlowImage img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+}
+
+.sectionIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가운데 정렬 */
+  margin-bottom: 20px;
+}
+
+/* 4번째 섹션 */
+
+.section04_Container {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+}
+
+
+/* 데이터테이블*/
+/* 표 전체 영역 */
+/* 전체 표 스타일 */
+.infoTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 셀 공통 */
+.infoTable th,
+.infoTable td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+}
+
+/* 🔹 제목 행: 파란 배경 */
+.infoTable thead tr:first-child th {
+  background-color: #2b5fc0;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 🔹 세부 그룹 타이틀 */
+.infoTable thead tr:nth-child(2) th,
+.infoTable thead tr:nth-child(3) th {
+  background-color: #376ed8;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 🔸 왼쪽 라벨 셀 */
+.highlight {
+  background-color: #eaf1ff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 총사업비, 최종 견적 금액 강조 셀 */
+.totalLabel {
+  background-color: #f1f1ff;
+  font-weight: 600;
+}
+
+/* 최종 견적 금액 행 전체 강조 (연노랑) */
+.infoTable tbody tr:last-child {
+  background-color: #fff4dc;
+  font-weight: 600;
+}
+
+/* 인건비 설명 스타일 */
+.infoTable td span {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* 반응형 테이블 wrapper */
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: -22px;
+  margin-left: auto; /* 왼쪽 여백 자동 */
+  margin-right: 180px;   /* 오른쪽은 딱 붙임 */
+}
+
+/* 5번째 섹션 */
+.supportGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.supportItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.supportItem img {
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.supportItem h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.supportItem p {
+  font-size: 14px;
+  line-height: 1.4;
+}

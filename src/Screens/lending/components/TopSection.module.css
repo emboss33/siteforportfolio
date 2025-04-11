@@ -1,0 +1,61 @@
+.Topcontainer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.backgroundvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.Topsection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.Topsection h1 {
+  font-size: 3rem;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.Topsection p {
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+
+.Topsection .TopSection_first_text {
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.Topsection .TopSection_second_text {
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+  
+}

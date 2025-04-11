@@ -1,0 +1,76 @@
+.middleSection {
+    background-color: #1d1f26;
+    color: #fff;
+    padding: 70px 40px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 400ms ease-out;
+    visibility: hidden; /* ← 추가 */
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; /* ← 추가 */
+  }
+  
+  .heading h2 {
+    color: #ffffff;
+  }
+  
+  .heading p {
+    color: #aaa;
+    margin: 35px;
+  }
+  
+  .card {
+    background: #2c2e36;
+    border-radius: 12px;
+    padding: 30px 20px;
+    color: #ccc;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+    margin-bottom: 15px;
+  }
+  
+  .card {
+    background: #2c2e36;
+    border-radius: 12px;
+    padding: 30px 20px;
+    color: #ccc;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #444;
+  }
+  
+  .card h3 {
+    color: #ffffff;
+  }
+  
+  .card p {
+    color: #bbb;
+  }
+  
+  
+  /* animation */
+  @keyframes fadeUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
