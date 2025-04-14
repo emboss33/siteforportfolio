@@ -9,6 +9,7 @@ import flowImage from "../../../Image/main/dava-m-img02.png";
 import styles from "./bodysection.module.css";
 import Datatable from "./DataTable";
 import section05_items from "./bodysection_05.js";
+
 const Bodysection = ({ handleToggleCalendar }) => {
   return (
     <div className={styles.mainContainer}>

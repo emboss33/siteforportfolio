@@ -1,12 +1,15 @@
 import styles from "./bodysection.module.css";
 import num4 from "../../../Image/main/dava-m-num04.png";
+
 const Datatable = () => {
   return (
     <div className={styles.section04_Container}>
-      {/* 왼쪽: 타이틀/설명 */}
+      {/* 숫자 아이콘 */}
       <div className={styles.sectionNumber}>
         <img src={num4} alt="섹션 번호 4" />
       </div>
+
+      {/* 타이틀 + 설명 */}
       <div className={styles.sectionContent}>
         <h2 className={styles.sectionTitle}>데이터 구매 사업비 구성</h2>
         <p className={styles.sectionSmallText}>
@@ -17,7 +20,7 @@ const Datatable = () => {
         </p>
       </div>
 
-      {/* 오른쪽: 표 테이블 */}
+      {/* 데스크탑 테이블 */}
       <div className={styles.tableWrapper}>
         <table className={styles.infoTable}>
           <thead>
@@ -145,6 +148,66 @@ const Datatable = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      {/* 모바일 카드형 뷰 */}
+      <div className={styles.infoCardList}>
+        {/* 예시 카드 - 초기중견기업 */}
+        <div className={styles.infoCardItem}>
+          <h4>초기중견기업</h4>
+          <p>
+            <strong>정부지원금:</strong> 10,000,000 (75%)
+          </p>
+          <p>
+            <strong>현금부담:</strong> 3,334,000 (25%)
+          </p>
+          <p>
+            <strong>총사업비:</strong> 13,334,000
+          </p>
+          <p>
+            <strong>최종금액:</strong> 13,334,000
+          </p>
+        </div>
+
+        <div className={styles.infoCardItem}>
+          <h4>중소기업</h4>
+          <p>
+            <strong>정부지원금:</strong> 10,000,000 (75%)
+          </p>
+          <p>
+            <strong>현금:</strong> 334,000 (2.5%)
+          </p>
+          <p>
+            <strong>현물:</strong> 3,000,000 (22.5%)
+          </p>
+          <p>
+            <strong>총사업비:</strong> 13,334,000
+          </p>
+          <p>
+            <strong>최종금액:</strong> 10,334,000
+          </p>
+        </div>
+
+        <div className={styles.infoCardItem}>
+          <h4>청년기업</h4>
+          <p>
+            <strong>정부지원금:</strong> 10,000,000 (90%)
+          </p>
+          <p>
+            <strong>현금:</strong> -
+          </p>
+          <p>
+            <strong>현물:</strong> 1,112,000 (10%)
+          </p>
+          <p>
+            <strong>총사업비:</strong> 11,112,000
+          </p>
+          <p>
+            <strong>최종금액:</strong> 10,000,000
+          </p>
+        </div>
+
+        {/* 필요한 항목 계속 추가 가능 */}
       </div>
     </div>
   );

@@ -35,10 +35,12 @@ const AboutUs = () => {
                     <li key={i}>{text}</li>
                   ))}
                 </ul>
+
+                {/* 🟨 데스크탑 전용 버튼 */}
                 {item.button && (
                   <a
                     href={item.button.link}
-                    className={styles.businessBtn}
+                    className={`${styles.businessBtn} ${styles.desktopOnly}`}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -46,8 +48,21 @@ const AboutUs = () => {
                   </a>
                 )}
               </div>
+
               <div className={styles.businessImage}>
                 <img src={item.image} alt={item.title} />
+
+                {/* 🟦 모바일 전용 버튼: 이미지 아래로 위치 */}
+                {item.button && (
+                  <a
+                    href={item.button.link}
+                    className={`${styles.businessBtn} ${styles.mobileOnly}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {item.button.text}
+                  </a>
+                )}
               </div>
             </div>
           ))}

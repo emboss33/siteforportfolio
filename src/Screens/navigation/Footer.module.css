@@ -121,3 +121,77 @@
     z-index: 1000;
   }
   
+  @media (max-width: 768px) {
+    .ctaSection {
+      padding: 40px 20px;
+      text-align: left;
+    }
+  
+    .ctaSection h2 {
+      font-size: 24px;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .ctaSection p {
+      font-size: 16px;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .ctaButton {
+      display: block;
+      width: 100%;
+      padding: 14px 0;
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    .infoSection {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+  
+    .left, .center, .right {
+      min-width: 100%;
+      margin-bottom: 24px;
+    }
+  
+    .logo {
+      width: 140px;
+    }
+  
+    .center h4,
+    .right h4 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  
+    .right li {
+      font-size: 13px;
+    }
+  
+    .right li strong {
+      width: 60px;
+      font-size: 13px;
+    }
+  
+    .sns {
+      gap: 8px;
+      margin-top: 10px;
+    }
+  
+    .sns img {
+      width: 20px;
+    }
+  
+    .topBtn {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  

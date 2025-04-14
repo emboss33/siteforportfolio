@@ -1,53 +1,151 @@
-/* 기본 상태 */
+/* ========== 기본 내비게이션 ========== */
 .navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    padding: 0 40px;
-    display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 0 40px; */
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* 스크롤 시 배경 변경 */
+.navigation.scrolled {
+  background: white;
+}
+
+/* 내부 컨테이너 */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+/* 로고 */
+.nav-logo img {
+  height: 40px;
+}
+
+.navigation.scrolled .nav-logo img {
+  filter: invert(1);
+}
+
+/* 메뉴 링크 - 데스크탑 */
+.nav-links {
+  list-style: none;
+  display: flex;
+
+  padding: 0;
+  margin-right: 3vw; /* or 5% */
+  gap: 2vw;           /* gap 도 비율화하면 더 좋음 */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navigation.scrolled .nav-links li a {
+  color: black;
+}
+
+/* ========== 햄버거 버튼 ========== */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.navigation.scrolled .nav-toggle span {
+  background: black;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========== 반응형: 모바일용 ========== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row; /* ✅ 수정: row로 유지 */
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
-    background: rgba(0, 0, 0, 0); /* 투명 */
-    transition: all 0.3s ease;
-    z-index: 1000;
-    justify-content: space-between;  /* 좌우 정렬 */
+    height: 60px;
+    /* margin-right: 15%; */
   }
-  
+
+  .nav-logo {
+    /* margin-right: 15%; */
+  }
 
   .nav-logo img {
-    height: 40px;
-    margin-right: 20px;
+    /* margin-right: 5%; */
+    
+    margin-left: 5%;
+
   }
 
-  .navigation.scrolled .nav-logo img {
-    filter: invert(1);
-  }
 
-  
-  .navigation ul {
-    list-style: none;
+  .nav-toggle {
     display: flex;
-    gap: 50px;
-    margin: 60px;
-    padding: 0;
+    margin-right: 2%;
+    margin-bottom: 10px;
   }
-  
-  .navigation a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: #1d1f26;
+    padding: 20px;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+    margin: 0; /* ✅ 여백 제거 */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* ✅ 구분선 추가 (흰색 반투명) */
+    padding-top: 16px; /* 너무 딱 붙지 않도록 약간 숨 쉴 공간 */
+
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    padding: 10px 0;
+    color: white;
   }
-  
-  /* 스크롤된 상태 */
-  .navigation.scrolled {
-    background: white;
+
+  .navigation.scrolled .nav-links li a {
+    color: white;
   }
-  
-  .navigation.scrolled a {
-    color: black;
-  }
-  
+}

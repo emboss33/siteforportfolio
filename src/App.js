@@ -13,9 +13,9 @@ const App = () => {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<Lendingpage />} />
           <Route path="/aboutus" element={<AboutUs/>} />
-          <Route path="/introduction" element={<Lendingpage/>}/>
+          <Route path="/Mainpage" element={<MainPage/>}/>
            {/* <Route path="/about" element={<About />} /> */}
           {/* 더 많은 페이지 추가 가능 */}
           <Route path="*" element={<Navigate to="/" replace />} />

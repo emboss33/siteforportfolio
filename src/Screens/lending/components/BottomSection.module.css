@@ -74,3 +74,13 @@
       opacity: 1;
     }
   }
+
+
+  /* 모바일 사이즈에서 이미지 조정 */
+@media (max-width: 768px) {
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px; /* 필요 시 이미지 세로 길이 제한 */
+  }
+}

@@ -59,3 +59,29 @@
   }
   
 }
+
+@media (max-width: 768px) {
+  .Topsection h1 {
+    font-size: 2rem; /* 모바일에서 더 작은 크기 */
+    width:500px
+  }
+
+  .Topsection p,
+  .Topsection .TopSection_first_text,
+  .Topsection .TopSection_second_text {
+    font-size: 1rem; /* 모바일에서도 적절한 본문 크기 */
+  }
+}
+
+@media (max-width: 480px) {
+  .Topsection h1 {
+    font-size: 1.5rem; /* 아주 작은 기기 대응 */
+    width:500px
+  }
+
+  .Topsection p,
+  .Topsection .TopSection_first_text,
+  .Topsection .TopSection_second_text {
+    font-size: 0.9rem;
+  }
+}

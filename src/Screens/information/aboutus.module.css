@@ -1,25 +1,25 @@
+/* ===== 배경 섹션 ===== */
 .aboutUs_Background {
-    background: url('../../Image/aboutus/aboutus_header.png') no-repeat center center / cover;
-    min-height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    box-sizing: border-box;
-  }
-
-  .aboutUs_text {
-    max-width: 800px;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  }
-
-
-  .businessSection {
-  padding: 60px 20px;
+  background: url('../../Image/aboutus/aboutus_header.png') no-repeat center center / cover;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
+.aboutUs_text {
+  max-width: 800px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== 사업 소개 섹션 ===== */
+.businessSection {
+  padding: 60px 20px;
+}
 
 .businessTitle {
   padding-left: 80px;
@@ -33,20 +33,33 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* ===== 카드형 사업 항목 ===== */
 .businessItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
-  padding: 20px 0;
-  flex-wrap: nowrap; /* ✅ 강제로 한 줄 유지 */
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+  flex-wrap: nowrap;
 }
+
+.businessItem:hover {
+  transform: translateY(-3px);
+}
+
+/* 텍스트 */
 .businessText {
   flex: 1 1 50%;
   max-width: 500px;
   min-width: 320px;
 }
-
 
 .businessItemTitle {
   font-size: 28px;
@@ -65,57 +78,107 @@
   font-size: 15px;
 }
 
+/* 버튼 */
 .businessBtn {
   background: #4f46e5;
   color: white;
-  padding: 10px 24px;
+  padding: 10px 0;
   font-weight: bold;
   border-radius: 24px;
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  width: 160px;
+  box-shadow: 0 3px 6px rgba(79, 70, 229, 0.3);
 }
 
+/* 이미지 */
 .businessImage {
-  flex: 0 0 460px; /* ✅ 이미지 너비 고정 */
+  flex: 0 0 460px;
 }
 
 .businessImage img {
-  flex: 0 0 500px; /* ✅ 이미지 영역 고정 */
+  flex: 0 0 500px;
   max-width: 600px;
-  /* height: auto;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  border-radius: 16px; 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-  /* src/components/MainBanner.css
-.dava-main-banner-seciton {
-    position: relative;
-    background-color: #f5f5f5;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .dava-banner-info-box h2 {
-    font-size: 36px;
+/* ===== 표시 조건별 스타일 ===== */
+.desktopOnly {
+  display: inline-block;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+/* ===== 반응형 (768px 이하) ===== */
+@media (max-width: 768px) {
+  .businessTitle {
+    font-size: 35px;
+    padding-left: 10px;
     margin-bottom: 20px;
+    min-width: 0; /* ✅ 추가 */
+    width: 100%;   /* ✅ 추가 */
   }
-  
-  .dmip {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+
+  .businessItem {
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%; /* ✅ 카드도 100%로 제한 */
+    max-height: 20%;
+    box-sizing: border-box;
   }
-  
-  .dmip_a {
+
+  .businessText {
+    max-width: 50%;
+    font-size: 15px;
+    
+  }
+
+  .businessText h3{
+    max-width: 100%;
+    font-size: 20px;
+    padding-left: 2%;
+  }
+
+  .businessText li {
+    font-size: 11px;   /* ✅ 더 작게 지정 */
+    margin-bottom: 14px; /* ✅ 여백도 조정 */
+  }
+
+  .businessImage {
+    width: 100%;
+    flex: 0 0 120px;
+    
+  }
+
+  .businessImage img {
+    width: 100%;
+    height: auto;
+
+    
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+    width: 100%;
+    text-align: center;
     margin-top: 20px;
   }
-  
-  .dmip_a a {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #3e64ff;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
+
+  .businessBtn {
+    width: 100%;
   }
-   */
+}
